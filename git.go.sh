@@ -2,4 +2,4 @@
 git add .
 read commitnote
 git commit -am "$commitnote"
-git push origin master
+git push origin main
