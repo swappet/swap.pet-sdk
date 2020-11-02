@@ -2,9 +2,9 @@
 js SDK for swap.pet to popular DeFi protocols, include **ABIs**, **Addresses**, **constants**, **utils** ...
 
 [![circleci](https://badgen.net/circleci/github/swappet/swap.pet-sdk)](https://app.circleci.com/pipelines/github/swappet/swap.pet-sdk)
-[![npm](https://badgen.net/npm/v/@swappet/swap.pet-sdk)](https://www.npmjs.com/package/@swappet/swap.pet-sdk)
-![types](https://badgen.net/npm/types/@swappet/swap.pet-sdk)
-![minzip](https://badgen.net/bundlephobia/minzip/@swappet/swap.pet-sdk)
+[![npm](https://badgen.net/npm/v/@swappet/swap.pet-sdk)](https://www.npmjs.com/package/swap.pet-sdk)
+![types](https://badgen.net/npm/types/swap.pet-sdk)
+![minzip](https://badgen.net/bundlephobia/minzip/swap.pet-sdk)
 
 **Now with Typescript-powered autocomplete!**
 
