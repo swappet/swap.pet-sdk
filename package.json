@@ -1,0 +1,38 @@
+{
+  "name": "swap.pet-sdk",
+  "version": "1.0.0",
+  "description": "js SDK for swap.pet, include ABI, constants, utils ...",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/swappet/swap.pet-sdk.git"
+  },
+  "author": "swappet <swap.pet@pm.me>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/swappet/swap.pet-sdk/issues"
+  },
+  "homepage": "https://github.com/swappet/swap.pet-sdk#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "swap.pet",
+    "ethereum",
+    "abi",
+    "defi",
+    "SPTE",
+    "SPTC",
+    "SPTF",
+    "uniswap",
+    "sushiswap",
+    "Compound",
+    "Curve",
+    "ERC20",
+    "MakerDAO",
+    "Synthetix",
+    "Balancer"
+  ]
+}
