@@ -50,7 +50,7 @@ import { default as wbtc } from "./wbtc";
 import { default as yam } from "./yam";
 import { default as yearn } from "./yearn";
 
-export const abi = {
+export const sdk = {
   swappet,
   tokens,
   inch1,
