@@ -39,10 +39,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && tsc --declaration && cp package.json dist && cp README.md dist",
-    "postbuild": "copyfiles --verbose -u 1 src/**/*.sol dist",
-    "build:docs": "embedme docs/* && yarn build && node scripts/genAddrMainnetOverview.js > docs/overview_mainnet_address.md",
-    "serve:docs": "docsify serve ./docs",
+    "build": "yarn clean && tsc --declaration && cp package.json dist && cp README.md dist",  
     "test": "jest --verbose",
     "link": "yarn build && cd dist && npm link",
     "prepublishOnly": "echo \"Error: Don't run 'npm publish' in root. Use 'npm run dist' instead.\" && exit 1",
