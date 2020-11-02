@@ -2,7 +2,8 @@
   "name": "swap.pet-sdk",
   "version": "1.0.0",
   "description": "js SDK for swap.pet, include ABI, constants, utils ...",
-  "main": "index.js",
+  "main": "index.js", 
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/swappet/swap.pet-sdk.git"
@@ -37,7 +38,18 @@
     "typescript": "^4.0.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "build": "yarn clean && tsc --declaration && cp package.json dist && cp README.md dist",
+    "postbuild": "copyfiles --verbose -u 1 src/**/*.sol dist",
+    "build:docs": "embedme docs/* && yarn build && node scripts/genAddrMainnetOverview.js > docs/overview_mainnet_address.md",
+    "serve:docs": "docsify serve ./docs",
+    "test": "jest --verbose",
+    "link": "yarn build && cd dist && npm link",
+    "prepublishOnly": "echo \"Error: Don't run 'npm publish' in root. Use 'npm run dist' instead.\" && exit 1",
+    "dist": "cd dist && npm publish --ignore-scripts --access public" 
+  },
+  "prettier": {
+    "trailingComma": "all"
   },
   "keywords": [
     "swap.pet",

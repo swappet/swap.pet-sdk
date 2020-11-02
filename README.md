@@ -79,6 +79,6 @@ uniswap.factory.abi;
 uniswap.factory.address;
 
 // logo of DeFi app
-import { uniswapLogo } from "swap.pet-sdk/dapps/app.uniswap.org";
+import { uniswapLogo } from "swap.pet-sdk/logos/app.uniswap.org";
 ```
 
