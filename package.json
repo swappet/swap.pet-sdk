@@ -48,6 +48,7 @@
   "prettier": {
     "trailingComma": "all"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "swap.pet",
     "ethereum",
