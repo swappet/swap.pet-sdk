@@ -2,7 +2,7 @@
   "name": "swap.pet-sdk",
   "version": "1.0.0",
   "description": "js SDK for swap.pet, include ABI, constants, utils ...",
-  "main": "index.js", 
+  "main": "index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
@@ -21,6 +21,9 @@
     "@ethersproject/networks": "^5.0.4",
     "@ethersproject/providers": "^5.0.14",
     "@ethersproject/solidity": "^5.0.5",
+    "@nomiclabs/buidler": "^1.4.8",
+    "@nomiclabs/hardhat-truffle5": "^2.0.0",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
     "@types/big.js": "^6.0.0",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.14.6",
@@ -29,19 +32,22 @@
     "docsify-cli": "^4.4.1",
     "dotenv": "^8.2.0",
     "embedme": "^1.22.0",
+    "eth-gas-reporter": "^0.2.19",
     "ethers": "^5.0.19",
     "ganache-core": "^2.13.1",
+    "hardhat": "^2.0.2",
     "jest": "^26.6.1",
     "json2md": "^1.9.0",
+    "solidity-coverage": "^0.7.11",
     "ts-jest": "^26.4.3",
     "tsdx": "^0.14.1",
     "typescript": "^4.0.5"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && tsc --declaration && cp package.json dist && cp README.md dist", 
+    "build": "yarn clean && tsc --declaration && cp package.json dist && cp README.md dist",
     "build:docs": "embedme docs/* && yarn build && node scripts/reviewMainnetAddr.js > docs/review_mainnet_address.md",
-    "serve:docs": "docsify serve ./docs",  
+    "serve:docs": "docsify serve ./docs",
     "test": "jest --verbose",
     "link": "yarn build && cd dist && npm link",
     "prepublishOnly": "echo \"Error: Don't run 'npm publish' in root. Use 'npm run dist' instead.\" && exit 1",
@@ -50,7 +56,9 @@
   "prettier": {
     "trailingComma": "all"
   },
-  "publishConfig": { "registry": "http://registry.npmjs.org" },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
   "keywords": [
     "swap.pet",
     "ethereum",
