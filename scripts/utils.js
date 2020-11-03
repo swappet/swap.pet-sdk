@@ -1,21 +1,24 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2020 Swap.Pet@pm.me
 // test/buyUniswapBAT.test.js 
-import { ethers } from "ethers";
-import { BigNumber } from "ethers/utils";
-export const fromWei = (x, decimals) => ethers.utils.formatUnits(x, decimals);
+//import { ethers } from "ethers";
+//import { BigNumber } from "ethers/utils";
+const { ethers } = require('ethers');
+//const {BigNumber} = require('ethers/utils');
+const fs = require('fs');
+const fromWei = (x, decimals) => ethers.utils.formatUnits(x, decimals);
 
-export const mineBlock = async (provider, timestamp) =>
+ const mineBlock = async (provider, timestamp) =>
   await provider.send("evm_mine", [timestamp]);
 
-export const increaseTime = async (provider, secsToIncrease) => {
+ const increaseTime = async (provider, secsToIncrease) => {
   const blockNumber = await provider.getBlockNumber();
   const { timestamp: currentTimestamp } = await provider.getBlock(blockNumber);
   const newTime = Number(currentTimestamp) + Number(secsToIncrease);
   await mineBlock(provider, newTime);
 };
 
-export const getTestFiles = async (path) => {
+ const getTestFiles = async (path) => {
   // getFiles = async (path) => {
     const tests = await fs.readdirSync(path, 'utf-8');
     let files = [{name:'tesl all',value:'all'}];
@@ -34,3 +37,9 @@ export const getTestFiles = async (path) => {
     })
     return files;
 }
+module.exports = {
+  fromWei,
+  mineBlock,
+  increaseTime,
+  getTestFiles,
+};
