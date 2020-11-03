@@ -6,6 +6,7 @@ const path = require('path');
 require("dotenv").config(); 
 const { ethers } = require("ethers");
 const ganache = require("ganache-core");  
+const { spawn } = require('child_process');
 
 const infuraKey = fs.readFileSync(path.resolve(__dirname, '../.infuraKey')).toString().trim(); 
 const mainetURL = `https://mainnet.infura.io/v3/${infuraKey}` 
@@ -74,6 +75,7 @@ const forkChain = async () => {
       });
     });
   };
+  await serverListen();
 
   return { serverListen, serverClose };
 
