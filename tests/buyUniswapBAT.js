@@ -22,14 +22,16 @@ const wethContract = new ethers.Contract(
   deployer
 )
 describe("test:buy Uniswap BAT with ETH", () => { 
-  await wethContract.deposit({
-    value: ethers.utils.parseEther("1.0"),
-    gasLimit: 1000000,
-    from:deployer
-  })
+  test("deposit ETH to WETH ", async () => {
+    await wethContract.deposit({
+      value: ethers.utils.parseEther("1.0"),
+      gasLimit: 1000000,
+      from:deployer
+    })
 
-  const wethBal = await wethContract.balanceOf(deployer.address)
-  console.log(`deployer WETH Balance: ${ethers.utils.formatEther(wethBal)}`)
+    const wethBal = await wethContract.balanceOf(deployer.address)
+    console.log(`deployer WETH Balance: ${ethers.utils.formatEther(wethBal)}`)
+  } 
 
   test("initial BAT balance of 0", async () => {
     const batContract = new ethers.Contract(
