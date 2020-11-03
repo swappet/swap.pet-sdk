@@ -50,7 +50,7 @@ const forkChain = async () => {
 
   const serverListen = async () => {
     await new Promise((resolve, reject) => {
-      server.listen(PORT, () => {
+      server.listen(process.env.PORT, () => {
         console.log(`Forked off of node: ${mainetURL}\n`);
         console.log(`Test private key:\n`);
         console.log(`\t${process.env.PRIV_KEY_DEPLOY}`);
