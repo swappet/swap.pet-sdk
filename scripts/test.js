@@ -4,7 +4,7 @@
 const fs = require('fs');
 var inquirer = require('inquirer');
 const { spawn } = require('child_process');
-const { getTestFiles } = require("./scripts/utils");
+const { getTestFiles } = require("./utils");
 
 const testDir = 'tests/'; 
 const test = async () => {
