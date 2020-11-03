@@ -9,7 +9,9 @@ const ganache = require("ganache-core");
 const { spawn } = require('child_process');
 
 const infuraKey = fs.readFileSync(path.resolve(__dirname, '../.infuraKey')).toString().trim(); 
+console.log(`infuraKey: ${infuraKey}\n`);
 const mainetURL = `https://mainnet.infura.io/v3/${infuraKey}` 
+console.log(`mainetURL: ${mainetURL}\n`);
 
 const forkChain = async () => {
   if (!infuraKey || !process.env.PRIV_KEY_DEPLOY) {
