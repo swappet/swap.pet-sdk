@@ -6,7 +6,7 @@ var inquirer = require('inquirer');
 const { spawn } = require('child_process');
 const { getTestFiles } = require("./utils");
 
-const testDir = 'tests/'; 
+const testDir = 'test/'; 
 const test = async () => {
     const files = await getTestFiles(testDir);
 
