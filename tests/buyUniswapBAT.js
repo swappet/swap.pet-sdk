@@ -2,7 +2,7 @@
 // Copyright 2020 Swap.Pet@pm.me
 // test/buyUniswapBAT.test.js 
 const { ethers } = require("ethers") 
-const { fromWei } = require("./scripts/utils")
+const { fromWei } = require("../scripts/utils")
 require("dotenv").config() 
 
 const { sdk } = require("../src")  
