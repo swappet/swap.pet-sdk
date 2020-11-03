@@ -90,6 +90,6 @@ const runTest = async () => {
   });
 };
 module.exports = {
-  forkedChain,
+  forkChain,
   runTest,
 };
