@@ -1,6 +1,6 @@
 {
   "name": "swap.pet-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js SDK for swap.pet, include ABI, constants, utils ...",
   "main": "index.js",
   "types": "index.d.ts",
