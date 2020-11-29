@@ -1,14 +1,14 @@
-# swap.pet-sdk
+# swappet-sdk
 js SDK for swap.pet to popular DeFi protocols, include **ABIs**, **Addresses**, **constants**, **utils** ...
 
-[![circleci](https://badgen.net/circleci/github/swappet/swap.pet-sdk)](https://app.circleci.com/pipelines/github/swappet/swap.pet-sdk)
-[![npm](https://badgen.net/npm/v/@swappet/swap.pet-sdk)](https://www.npmjs.com/package/swap.pet-sdk)
-![types](https://badgen.net/npm/types/swap.pet-sdk)
-![minzip](https://badgen.net/bundlephobia/minzip/swap.pet-sdk)
+[![circleci](https://badgen.net/circleci/github/swappet/swappet-sdk)](https://app.circleci.com/pipelines/github/swappet/swappet-sdk)
+[![npm](https://badgen.net/npm/v/swappet-sdk)](https://www.npmjs.com/package/swappet-sdk)
+![types](https://badgen.net/npm/types/swappet-sdk)
+![minzip](https://badgen.net/bundlephobia/minzip/swappet-sdk)
 
 **Now with Typescript-powered autocomplete!**
 
-`swap.pet-sdk` is an NPM package that provides you with the **ABIs**, **Addresses**, **constants**, **utils** for popular DeFi protocols.
+`swappet-sdk` is an NPM package that provides you with the **ABIs**, **Addresses**, **constants**, **utils** for popular DeFi protocols.
 
 ### Click [here](https://docs.swap.pet) for docs and visit our Discord [here](https://discord.gg/CDCrXy2)!
 
@@ -50,7 +50,7 @@ Protocols supported:
 ## Install
 
 ```bash
-npm install swap.pet-sdk
+npm install swappet-sdk
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ npm install swap.pet-sdk
 ### JavaScript
 
 ```javascript
-import { sdk } from "swap.pet-sdk";
+import { sdk } from "swappet-sdk";
 
 // access token ABIs and addresses
 sdk.tokens.dai.abi;
@@ -69,16 +69,16 @@ sdk.uniswap.factory.abi;
 sdk.uniswap.factory.address; 
 
 // import only the tokens 
-import tokens from "swap.pet-sdk/tokens";
+import tokens from "swappet-sdk/tokens";
 tokens.dai.abi;
 tokens.dai.address;
 
 // import only the protocol you are interested in
-import uniswap from "swap.pet-sdk/uniswap";
+import uniswap from "swappet-sdk/uniswap";
 uniswap.factory.abi;
 uniswap.factory.address;
 
 // logo of DeFi app
-import { uniswapLogo } from "swap.pet-sdk/logos/app.uniswap.org";
+import { uniswapLogo } from "swappet-sdk/logos/app.uniswap.org";
 ```
 
