@@ -137,15 +137,6 @@ const tokens = {
     description: "UNI is the Uniswap protocol token. Uniswap is a decentralized protocol for automated liquidity provision on Ethereum.",
     logoURI:"https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png",
   },
-  0xbtc: {
-    symbol: "0xBTC",
-    decimals: 8,
-    address: "0xB6eD7644C69416d67B522e20bC294A9a9B405B31",
-    name: "0xBitcoin Token",
-    website: '',
-    description: "0xBitcoin Token",
-    logoURI:"https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xB6eD7644C69416d67B522e20bC294A9a9B405B31/logo.png",
-  },
   adai: {
     symbol: "aDAI",
     decimals: 18,
@@ -682,13 +673,6 @@ const tokens = {
     decimals: 8,
     logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1C5db575E2Ff833E46a2E9864C22F4B22E0B37C2/logo.png"
   },
-  rep: {
-    name: "Reputation Augur v1",
-    address: "0x1985365e9f78359a9B6AD760e32412f4a445E862",
-    symbol: "REP",
-    decimals: 18,
-    logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1985365e9f78359a9B6AD760e32412f4a445E862/logo.png"
-  },
   repv2: {
     name: "Reputation Augur v2",
     address: "0x221657776846890989a759BA2973e427DfF5C9bB",
@@ -926,14 +910,7 @@ const tokens = {
     symbol: "SRM",
     decimals: 6,
     logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x476c5E26a75bd202a9683ffD34359C0CC15be0fF/logo.png"
-  },
-  zrx: {
-    name: "0x Protocol Token",
-    address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
-    symbol: "ZRX",
-    decimals: 18,
-    logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xE41d2489571d322189246DaFA5ebDe1F4699F498/logo.png"
-  } 
+  }
 };
 
 export default tokens;
