@@ -14,7 +14,9 @@
     "url": "https://github.com/swappet/swap.pet-sdk/issues"
   },
   "homepage": "https://github.com/swappet/swap.pet-sdk#readme",
-  "dependencies": {},
+  "dependencies": {
+    "swappet-token-list": "^1.0.12"
+  },
   "devDependencies": {
     "@ethersproject/address": "^5.0.5",
     "@ethersproject/contracts": "^5.0.5",
