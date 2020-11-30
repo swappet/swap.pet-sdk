@@ -2,9 +2,6 @@ import ERC20Abi from "./abi/ERC20.json";
 import WETHAbi from "./abi/WETH.json"; 
 import tL from 'swappet-token-list/build/tokenlist.json' 
 console.log("tokenlist:", tL.tokens) 
-
-var account = tL.tokens.find(v => v.keys.address === wallet.address)
-
 var tokens = {
   ETH: { 
     website: "https://ethereum.org",
@@ -69,9 +66,11 @@ var tokens = {
     description: "UNI is the Uniswap protocol token. Uniswap is a decentralized protocol for automated liquidity provision on Ethereum.", 
   }
 };
+var symbol
 for (var i = 0; i < tL.tokens.length; i++) {
+  symbol = tL.tokens[i].symbol
   if (tL.tokens[i].chainId === 1) { // mainnet
-    tokens[symbol] = tokens[symbol]?{...tokens[symbol], ...tL.tokens[i]}:tL.tokens[i] 
+    tokens[symbol] = tokens[symbol] ? {...tokens[symbol], ...tL.tokens[i]} : tL.tokens[i] 
   }
 }
 
