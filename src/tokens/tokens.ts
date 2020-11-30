@@ -69,7 +69,8 @@ var symbol
 for (var i = 0; i < tL.tokens.length; i++) {
   symbol = tL.tokens[i].symbol
   if (tL.tokens[i].chainId === 1) { // mainnet
-    mTokens[symbol] = mTokens[symbol] ? {...mTokens[symbol], ...tL.tokens[i]} : tL.tokens[i] 
+    // mTokens[symbol] = mTokens[symbol] ? {...mTokens[symbol], ...tL.tokens[i]} : tL.tokens[i] 
+    mTokens[symbol] = tL.tokens[i]
   }
   if (!mTokens[symbol].abi) {
     mTokens[symbol].abi = ERC20Abi
