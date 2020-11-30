@@ -3,15 +3,15 @@ import tokens from "../tokens";
 const ilks = {
   batA: {
     symbol: "BAT-A",
-    token: { address: tokens.BAT.address },
+    token: { address: tokens.bat.address },
   },
   ethA: {
     symbol: "ETH-A",
-    token: { address: tokens.ETH.address },
+    token: { address: tokens.eth.address },
   },
   usdcA: {
     symbol: "USDC-A",
-    token: { address: tokens.USDC.address },
+    token: { address: tokens.usdc.address },
   },
 };
 
