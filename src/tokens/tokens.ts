@@ -2,7 +2,7 @@ import ERC20Abi from "./abi/ERC20.json";
 import WETHAbi from "./abi/WETH.json"; 
 import tL from 'swappet-token-list/build/tokenlist.json' 
 console.log("tokenlist:", tL.tokens) 
-var tokens = {
+var mTokens = {
   'ETH': { 
     'website': "https://ethereum.org",
     'description': "Open source platform to write and distribute decentralized applications." 
@@ -32,8 +32,7 @@ var tokens = {
     'description': "USDC is a fully collateralized US dollar stablecoin, an Ethereum powered coin and is the brainchild of CENTRE, an open source project bootstrapped by contributions from Circle and Coinbase." 
   },
   'WETH': { 
-    abi: WETHAbi,
-    name: "Wrapped Ethereum",
+    'abi': WETHAbi, 
     'website': "https://weth.io",
     'description': "Wrapped Ethereum" 
   },
@@ -70,8 +69,12 @@ var symbol
 for (var i = 0; i < tL.tokens.length; i++) {
   symbol = tL.tokens[i].symbol
   if (tL.tokens[i].chainId === 1) { // mainnet
-    tokens[symbol] = tokens[symbol] ? {...tokens[symbol], ...tL.tokens[i]} : tL.tokens[i] 
+    mTokens[symbol] = mTokens[symbol] ? {...mTokens[symbol], ...tL.tokens[i]} : tL.tokens[i] 
+  }
+  if (!mTokens[symbol].abi) {
+    mTokens[symbol].abi = ERC20Abi
   }
 }
 
+const tokens = mTokens
 export default tokens;
